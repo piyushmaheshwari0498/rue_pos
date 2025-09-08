@@ -19,6 +19,11 @@ jobs:
         with:
           flutter-version: stable
 
+      - name: Install Visual Studio Build Tools
+        shell: powershell
+        run: |
+          choco install visualstudio2019buildtools --package-parameters "--add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --includeOptional" -y
+
       - name: Enable Windows Desktop
         run: flutter config --enable-windows-desktop
 
