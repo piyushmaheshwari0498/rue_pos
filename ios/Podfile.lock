@@ -1,0 +1,61 @@
+PODS:
+  - charset_converter (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_star_prnt (0.0.1):
+    - Flutter
+  - package_info_plus (0.4.5):
+    - Flutter
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - starxpand (0.0.1):
+    - Flutter
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - charset_converter (from `.symlinks/plugins/charset_converter/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_star_prnt (from `.symlinks/plugins/flutter_star_prnt/ios`)
+  - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - starxpand (from `.symlinks/plugins/starxpand/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/darwin`)
+
+EXTERNAL SOURCES:
+  charset_converter:
+    :path: ".symlinks/plugins/charset_converter/ios"
+  Flutter:
+    :path: Flutter
+  flutter_star_prnt:
+    :path: ".symlinks/plugins/flutter_star_prnt/ios"
+  package_info_plus:
+    :path: ".symlinks/plugins/package_info_plus/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+  starxpand:
+    :path: ".symlinks/plugins/starxpand/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/darwin"
+
+SPEC CHECKSUMS:
+  charset_converter: 215c7b04932ec2b9ba43be96a9bc34afed3e5322
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_star_prnt: c4ea89b6b9ccb708624f5830c9d34b7ee1165999
+  package_info_plus: 58f0028419748fad15bf008b270aaa8e54380b1c
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
+  starxpand: f25ce146b09a422c7f243e03a516bcee66f77ccd
+  webview_flutter_wkwebview: a4af96a051138e28e29f60101d094683b9f82188
+
+PODFILE CHECKSUM: 57c8aed26fba39d3ec9424816221f294a07c58eb
+
+COCOAPODS: 1.14.3

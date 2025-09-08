@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "815037712708",
+    "firebase_url": "https://ruecatering-2019f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ruecatering-2019f",
+    "storage_bucket": "ruecatering-2019f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815037712708:android:deb0cad0b3fa629e852f11",
+        "android_client_info": {
+          "package_name": "com.asa.kot_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBExD0tHvdnqu01_Y70zEHqWF5yNbLWkhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815037712708:android:09654122d343b730852f11",
+        "android_client_info": {
+          "package_name": "com.nestorbird.nb_posx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBExD0tHvdnqu01_Y70zEHqWF5yNbLWkhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
