@@ -29,7 +29,7 @@ jobs:
         run: flutter build windows --release
 
       # Extract app name + version from pubspec.yaml
-            - name: Get app name and version
+      - name: Get app name and version
         id: version
         shell: bash
         run: |
