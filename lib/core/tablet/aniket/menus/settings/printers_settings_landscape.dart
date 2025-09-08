@@ -16,7 +16,7 @@ import 'package:flutter/services.dart';
 // import 'package:flutter_star_prnt/flutter_star_prnt.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
-import 'package:flutter_star_prnt/flutter_star_prnt.dart';
+// import 'package:flutter_star_prnt/flutter_star_prnt.dart';
 // import 'package:flutter_star_prnt/flutter_star_prnt.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -270,7 +270,7 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscape> {
               ),
             ),
           ),
-          Visibility(
+         /* Visibility(
               visible: false,
               child: Column(children: [
                 Container(
@@ -360,7 +360,7 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscape> {
                                       printCommands: commands)}");
 
                               // const PaperSize paper = PaperSize.mm80;
-                              /*final profile = await CapabilityProfile.load();
+                              *//*final profile = await CapabilityProfile.load();
                               final generator = Generator(PaperSize.mm80, profile);
 
                               List<int> bytes = [];
@@ -387,9 +387,9 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscape> {
                                 Helper.showPopup(context,
                                     " Print Star Failed \nIP: ${printerIP}");
                                 print('Error printing: $e');
-                              }*/
+                              }*//*
 
-                              /*final printer =
+                              *//*final printer =
                                   esc_print.NetworkPrinter(paper, profile);
 
                               final esc_print.PosPrintResult res = await printer
@@ -429,7 +429,7 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscape> {
                               setState(() {
                                 printer_details =
                                     'Print result: ${res.msg} - IP: ${Helper.ip_adrress}';
-                              });*/
+                              });*//*
                               // print(
                               //     'Print result: ${res.msg} - IP: ${Helper.ip_adrress}');
                             },
@@ -714,7 +714,7 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscape> {
                     ],
                   ),
                 ),
-              ])),
+              ])),*/
         ],
       ),
     );

@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_star_prnt/flutter_star_prnt.dart';
+// import 'package:flutter_star_prnt/flutter_star_prnt.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../constants/app_constants.dart';
@@ -261,7 +261,7 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscapeCopy> {
                             //     emulation: emulationFor(port.modelName!),
                             //   ));
 
-                            PrintCommands commands = PrintCommands();
+                           /* PrintCommands commands = PrintCommands();
                             String raster = "        Star Clothing Boutique\n" +
                                 "             123 Star Road\n" +
                                 "           City, State 12345\n" +
@@ -321,7 +321,7 @@ class _PrinterSettingsState extends State<PrinterSettingsLandscapeCopy> {
                             // }
                             // });
                             debugPrint('else part after for loop');
-                            showOpeningBalanceDialog(context);
+                            showOpeningBalanceDialog(context);*/
                           },
                         ),
                         title: ElevatedButton.icon(

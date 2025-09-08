@@ -95,7 +95,7 @@ dependencies:
 #  flutter_star_prnt: ^2.4.1
   ffi: ^2.1.4
   starxpand: ^0.0.2
-  flutter_star_prnt: ^2.4.1
+#  flutter_star_prnt: ^2.4.1
   toastification: ^1.0.0
 
 

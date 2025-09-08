@@ -344,12 +344,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_star_prnt",
-      "rootUri": "file:///Users/piyushmaheshwari/.pub-cache/hosted/pub.dev/flutter_star_prnt-2.4.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "flutter_svg",
       "rootUri": "file:///Users/piyushmaheshwari/.pub-cache/hosted/pub.dev/flutter_svg-2.0.9",
       "packageUri": "lib/",

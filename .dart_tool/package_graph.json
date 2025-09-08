@@ -26,7 +26,6 @@
         "flutter_device_type",
         "flutter_expandable_fab",
         "flutter_launcher_icons",
-        "flutter_star_prnt",
         "flutter_svg",
         "get",
         "google_fonts",
@@ -129,14 +128,6 @@
         "iconsax_flutter",
         "pausable_timer",
         "uuid"
-      ]
-    },
-    {
-      "name": "flutter_star_prnt",
-      "version": "2.4.1",
-      "dependencies": [
-        "collection",
-        "flutter"
       ]
     },
     {
