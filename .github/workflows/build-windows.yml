@@ -19,11 +19,6 @@ jobs:
         with:
           flutter-version: '3.32.5'
 
-      - name: Install Visual Studio Build Tools
-        shell: powershell
-        run: |
-          choco install visualstudio2019buildtools --package-parameters "--add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --includeOptional" -y
-
       - name: Enable Windows Desktop
         run: flutter config --enable-windows-desktop
 
@@ -37,4 +32,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: build/windows/runner/Release/
+          path: |
+            build/windows/runner/Release/*.exe
+            build/windows/runner/Release/*.dll
+            build/windows/runner/Release/*.pdb
+            build/windows/runner/Release/flutter_assets/**
