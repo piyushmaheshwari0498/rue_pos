@@ -28,12 +28,21 @@ jobs:
       - name: Build Windows Release
         run: flutter build windows --release
 
+      # Extract app name + version from pubspec.yaml
+      - name: Get app name and version
+        id: version
+        run: |
+          APP_NAME=$(grep '^name:' pubspec.yaml | awk '{print $2}')
+          APP_VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
+          echo "app_name=$APP_NAME" >> $GITHUB_ENV
+          echo "app_version=$APP_VERSION" >> $GITHUB_ENV
+
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: windows-build
+          name: ${{ env.app_name }}-windows-${{ env.app_version }}
           path: |
-            build/windows/runner/Release/*.exe
-            build/windows/runner/Release/*.dll
-            build/windows/runner/Release/*.pdb
-            build/windows/runner/Release/flutter_assets/**
+            build/windows/**/runner/Release/*.exe
+            build/windows/**/runner/Release/*.dll
+            build/windows/**/runner/Release/*.pdb
+            build/windows/**/runner/Release/flutter_assets/**
