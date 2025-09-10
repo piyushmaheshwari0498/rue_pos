@@ -40,7 +40,7 @@ jobs:
       - name: Package Release Folder
         run: |
           cd build/windows/x64/runner
-          powershell Compress-Archive -Path Release -DestinationPath ../../../${{ env.app_name }}-${{ env.app_version }}-windows.zip -Force
+          powershell Compress-Archive -Path Release -DestinationPath ../../${{ env.app_name }}-${{ env.app_version }}-windows.zip -Force
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
