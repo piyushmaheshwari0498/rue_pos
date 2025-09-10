@@ -30,15 +30,20 @@ jobs:
 
       - name: Get app name and version
         id: version
-        shell: bash
+        shell: pwsh
         run: |
-          APP_NAME=$(grep '^name:' pubspec.yaml | awk '{print $2}')
-          APP_VERSION=$(grep '^version:' pubspec.yaml | awk '{print $2}')
-          echo "app_name=$APP_NAME" >> $GITHUB_ENV
-          echo "app_version=$APP_VERSION" >> $GITHUB_ENV
+          $appName = (Select-String -Path pubspec.yaml -Pattern '^name:' | ForEach-Object { $_.ToString().Split(':')[1].Trim() })
+          $appVersion = (Select-String -Path pubspec.yaml -Pattern '^version:' | ForEach-Object { $_.ToString().Split(':')[1].Trim() })
+          echo "app_name=$appName" >> $env:GITHUB_ENV
+          echo "app_version=$appVersion" >> $env:GITHUB_ENV
+
+      - name: Package Release Folder
+        run: |
+          cd build/windows/runner
+          powershell Compress-Archive -Path Release -DestinationPath ../../../../${{ env.app_name }}-${{ env.app_version }}-windows.zip -Force
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.app_name }}-windows-${{ env.app_version }}
-          path: build/windows/**/runner/Release/**
+          path: ${{ env.app_name }}-${{ env.app_version }}-windows.zip
