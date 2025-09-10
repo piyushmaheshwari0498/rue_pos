@@ -37,6 +37,13 @@ jobs:
           echo "app_name=$appName" >> $env:GITHUB_ENV
           echo "app_version=$appVersion" >> $env:GITHUB_ENV
 
+      # ✅ Fix icudtl.dat location
+      - name: Fix icudtl.dat location
+        run: |
+          if (Test-Path build/windows/x64/runner/Release/data/icudtl.dat) {
+            Move-Item -Force build/windows/x64/runner/Release/data/icudtl.dat build/windows/x64/runner/Release/icudtl.dat
+          }
+
       - name: Package Release Folder
         run: |
           cd build/windows/x64/runner
