@@ -32,18 +32,18 @@ jobs:
         id: version
         shell: pwsh
         run: |
-          $appName = (Select-String -Path pubspec.yaml -Pattern '^name:' | ForEach-Object { $_.ToString().Split(':')[1].Trim() })
-          $appVersion = (Select-String -Path pubspec.yaml -Pattern '^version:' | ForEach-Object { $_.ToString().Split(':')[1].Trim() })
+          $appName = (Select-String -Path pubspec.yaml -Pattern '^name:' | ForEach-Object { $_.Line.Split(':')[1].Trim() })
+          $appVersion = (Select-String -Path pubspec.yaml -Pattern '^version:' | ForEach-Object { $_.Line.Split(':')[1].Trim() })
           echo "app_name=$appName" >> $env:GITHUB_ENV
           echo "app_version=$appVersion" >> $env:GITHUB_ENV
 
       - name: Package Release Folder
         run: |
-          cd build/windows/runner
-          powershell Compress-Archive -Path Release -DestinationPath ../../../../${{ env.app_name }}-${{ env.app_version }}-windows.zip -Force
+          cd build/windows/x64/runner
+          powershell Compress-Archive -Path Release -DestinationPath ../../../${{ env.app_name }}-${{ env.app_version }}-windows.zip -Force
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.app_name }}-windows-${{ env.app_version }}
-          path: ${{ env.app_name }}-${{ env.app_version }}-windows.zip
+          path: build/windows/${{ env.app_name }}-${{ env.app_version }}-windows.zip
